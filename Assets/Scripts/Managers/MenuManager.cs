@@ -12,7 +12,7 @@ public class MenuManager : MonoBehaviour
 
     #region components
 
-    [SerializeField] AudioSource audio;
+     AudioSource audio;
 
     [SerializeField] GameObject WinLvlPnl;
     [SerializeField] GameObject LoseLvlPnl;
@@ -34,6 +34,7 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
+        audio = FindObjectOfType<AudioSource>();
         audio.volume = PlayerPrefs.GetFloat("MusicVolume");
         isStarted = false;
     }
